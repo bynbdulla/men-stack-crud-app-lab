@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Add New Book</h1>
+    <form action="/books" method="POST">
+        <!-- name field -->
+        <label for="name">NAME :</label>
+        <input type="text" name="name">
+        <br>
+        <br>
+
+        <!-- Total pages -->
+        <label for="totalPages">TOTAL PAGES : </label>
+        <input type="number" name="totalPages">
+        <br>
+        <br>
+
+        <!-- Like it ? -->
+        <label for="likeIt">DO YOU LIKE IT ? </label>
+        <input type="checkbox" name="likeIt">
+        <br>
+        <br>
+
+        <!-- Status -->
+        <label for="status">STATUS: </label>
+        <input type="text" name="status">
+        <br>
+        <br>
+        
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+
+</html>
