@@ -1,0 +1,16 @@
+<%- include('./partials/nav') %>
+
+<h1>The library</h1>
+
+<ul>
+    <% allBooks.forEach((item) => {%>
+        <a href="/books/<%= item._id%>">
+            <li>
+                <%= item.name %>
+            </li>
+            <li>
+               <%= item._id %>
+            </li>
+        </a>
+        <% }) %>
+</ul>

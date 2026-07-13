@@ -1,0 +1,21 @@
+<%- include('./partials/nav') %>
+
+<h1>Edit <%= foundBook.name %></h1>
+<form action="/books/<%= foundBook._id %>?_method=PUT" method="post">
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" value="<%= foundBook.name %>">
+    <br>
+    <label for="totalPages">Total Pages: </label>
+    <input type="number" id="totalPages" name="totalPages" value="<%= foundBook.totalPages %>">
+    <div class="checkbox-div">
+        <label for="likeIt">Do you like it ? </label>
+        <input type="checkbox" name="likeIt" id="likeIt">
+    </div>
+    <label for="name">Status: </label>
+    <input type="text" id="status" name="status" value="<%= foundBook.status %>">
+
+    <br>
+    <br>
+    <br>
+    <button type="submit">Updated!</button>
+</form>

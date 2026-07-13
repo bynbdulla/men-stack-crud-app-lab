@@ -1,0 +1,25 @@
+<%- include('./partials/nav') %>
+
+    <h1>
+        <%= foundBook.name %>
+    </h1>
+
+    <p>Total Pages: <%= foundBook.totalPages %>
+    </p>
+    <% if (foundBook.likeit){ %>
+        <p>I like this book</p>
+        <% } else { %>
+            <p>I didn't like the book </p>
+            <% } %>
+                <p>Status: <%= foundBook.status %>
+                </p>
+
+                <form action="/books/<%= foundBook._id %>?_method=DELETE" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+                <br>
+                <a href="/books/<%= foundBook._id %>/edit">Edit the <%= foundBook.name %></a>
+
+                </body>
+
+                </html>
